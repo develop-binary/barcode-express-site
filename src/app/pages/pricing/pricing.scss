@@ -29,112 +29,139 @@
       margin: 0 auto;
     }
 
-    .pricing-grid {
+    .pricing-content {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+
+      @media (max-width: 968px) {
+        grid-template-columns: 1fr;
+      }
     }
 
-    .pricing-card {
-      background: white;
-      padding: 2.5rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      position: relative;
-      transition: transform 0.3s, box-shadow 0.3s;
-
-      &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      &.featured {
-        border: 3px solid #667eea;
-
-        .badge {
-          position: absolute;
-          top: -15px;
-          left: 50%;
-          transform: translateX(-50%);
-          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-          color: white;
-          padding: 0.5rem 1.5rem;
-          border-radius: 2rem;
-          font-size: 0.875rem;
-          font-weight: 600;
-        }
-      }
-
-      h3 {
-        font-size: 1.75rem;
-        margin-bottom: 1.5rem;
+    .pricing-info {
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
         color: #1f2937;
       }
 
-      .price {
-        margin-bottom: 2rem;
-
-        .currency {
-          font-size: 1.5rem;
-          color: #6b7280;
-        }
-
-        .amount {
-          font-size: 3.5rem;
-          font-weight: 700;
-          color: #1f2937;
-        }
-
-        .period {
-          font-size: 1rem;
-          color: #6b7280;
-        }
+      p {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
       }
 
-      .features-list {
+      .pricing-factors {
         list-style: none;
         padding: 0;
         margin-bottom: 2rem;
 
         li {
           padding: 0.75rem 0;
-          color: #6b7280;
-          border-bottom: 1px solid #e5e7eb;
+          color: #4b5563;
+          padding-left: 1.5rem;
+          position: relative;
 
-          &:last-child {
-            border-bottom: none;
+          &:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
           }
         }
       }
 
-      button {
-        width: 100%;
-        padding: 1rem;
-        border-radius: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: all 0.3s;
-      }
+      .benefits-box {
+        background: white;
+        padding: 2rem;
+        border-radius: 1rem;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        margin-top: 2rem;
 
-      .btn-outline {
-        background: transparent;
-        color: #667eea;
-        border: 2px solid #667eea;
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+          color: #1f2937;
+        }
 
-        &:hover {
-          background: #667eea;
-          color: white;
+        .benefits-list {
+          list-style: none;
+          padding: 0;
+
+          li {
+            padding: 0.5rem 0;
+            color: #4b5563;
+          }
         }
       }
+    }
 
-      .btn-primary {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        border: none;
+    .contact-form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
-        &:hover {
-          transform: scale(1.05);
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+
+      p {
+        color: #6b7280;
+        margin-bottom: 1.5rem;
+      }
+
+      .contact-form {
+        .form-group {
+          margin-bottom: 1.5rem;
+
+          label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #374151;
+            font-weight: 500;
+          }
+
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+
+            &:focus {
+              outline: none;
+              border-color: #667eea;
+            }
+          }
+
+          textarea {
+            resize: vertical;
+          }
+        }
+
+        .btn-primary {
+          width: 100%;
+          padding: 1rem;
+          background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+          color: white;
+          border: none;
+          border-radius: 0.5rem;
+          font-size: 1.1rem;
+          font-weight: 600;
+          cursor: pointer;
+          transition: transform 0.3s, box-shadow 0.3s;
+
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+          }
         }
       }
     }
