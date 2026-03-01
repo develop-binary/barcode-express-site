@@ -1,0 +1,74 @@
+.about {
+  .page-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+    }
+
+    p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+  }
+
+  .about-section {
+    padding: 4rem 2rem;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .content-block {
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #1f2937;
+      }
+
+      p {
+        font-size: 1.1rem;
+        line-height: 1.8;
+        color: #6b7280;
+      }
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+
+      .stat-card {
+        text-align: center;
+        padding: 2rem;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        .stat-number {
+          font-size: 3rem;
+          font-weight: 700;
+          margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+          font-size: 1rem;
+          opacity: 0.9;
+        }
+      }
+    }
+  }
+}
