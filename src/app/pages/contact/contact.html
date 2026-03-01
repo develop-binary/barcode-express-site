@@ -11,44 +11,38 @@
       <div class="contact-grid">
         <div class="contact-info">
           <h2>Contact Information</h2>
-          <p>Have questions? We're here to help!</p>
+          <p>Have questions about Barcode Express? We're here to help!</p>
 
           <div class="info-item">
             <div class="icon">📧</div>
             <div class="details">
-              <h4>Email</h4>
-              <p>support&#64;barcodeexpress.com</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="icon">💬</div>
-            <div class="details">
-              <h4>Live Chat</h4>
-              <p>Available 24/7 on our platform</p>
-            </div>
-          </div>
-
-          <div class="info-item">
-            <div class="icon">📞</div>
-            <div class="details">
-              <h4>Phone</h4>
-              <p>1-800-BARCODE</p>
+              <h4>Email Support</h4>
+              <p>support&#64;developbinary.com</p>
             </div>
           </div>
 
           <div class="info-item">
             <div class="icon">🏢</div>
             <div class="details">
-              <h4>Office</h4>
-              <p>123 Tech Street<br>San Francisco, CA 94102</p>
+              <h4>Company</h4>
+              <p>developbinary</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="icon">⚡</div>
+            <div class="details">
+              <h4>Response Time</h4>
+              <p>We typically respond within 24 hours</p>
             </div>
           </div>
         </div>
 
         <div class="contact-form-container">
           <h2>Send Us a Message</h2>
-          <form class="contact-form">
+          <form class="contact-form" name="contact" method="POST" data-netlify="true">
+            <input type="hidden" name="form-name" value="contact">
+
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required>
