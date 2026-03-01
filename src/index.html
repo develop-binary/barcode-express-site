@@ -2,12 +2,30 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>BarcodeExpressSite</title>
+  <title>Barcode Express - Manufacturing Inventory Management</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="description" content="Manufacturing inventory management that predicts demand and automates work orders. Multi-platform e-commerce integration for Amazon, Shopify, eBay, and more.">
 </head>
 <body>
   <app-root></app-root>
+
+  <!-- Hidden forms for Netlify form detection -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="text" name="subject" />
+    <textarea name="message"></textarea>
+  </form>
+
+  <form name="pricing-inquiry" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="text" name="company" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="number" name="production-lines" />
+    <textarea name="message"></textarea>
+  </form>
 </body>
 </html>

@@ -44,8 +44,11 @@
           <h2>Contact Sales for Custom Pricing</h2>
           <p>Fill out the form below and our sales team will contact you within 24 hours to discuss your requirements and provide a custom quote.</p>
 
-          <form class="contact-form" name="pricing-inquiry" method="POST" data-netlify="true">
+          <form class="contact-form" name="pricing-inquiry" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
             <input type="hidden" name="form-name" value="pricing-inquiry">
+            <p style="display: none;">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
 
             <div class="form-group">
               <label for="name">Name</label>
